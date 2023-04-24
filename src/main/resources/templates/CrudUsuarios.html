@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Formulario usuarios</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<body>
+<form th:action="@{/guardar}" th:object="${usuario}" method="post">
+	<div class="form-group">
+		<label for="inputId">Id</label>
+		<input th:field="*{id}" class="form-control" id="inputId" placeholder="0">
+	</div>
+	
+	<div class="form-group">
+		<label for="inputFirst_name">First name</label>
+		<input th:field="*{first_name}" class="form-control" id="inputFirst_name" placeholder="Primer nombre">
+	</div>
+	
+	<div class="form-group">
+		<label for="inputLast_name">Last name</label>
+		<input th:field="*{last_name}" class="form-control" id="inputLast_name" placeholder="Apellido nombre">
+	</div>
+	
+	<div class="form-group">
+		<label for="inputUser">User</label>
+		<input th:field="*{user}" class="form-control" id="inputUser" placeholder="Usuario">
+	</div>
+	
+	<div class="form-group">
+		<label for="inputPassword">Password</label>
+		<input th:field="*{password}" class="form-control" id="inputPassword" placeholder="Contraseña">
+	</div>
+	
+	<div class="form-group">
+		<label for="inputDate_user">Date user</label>
+		<input th:field="*{date_user}" class="form-control" id="inputDate_user" placeholder="Fecha">
+	</div>
+	
+	<div class="form-group">
+		<label for="inputId_type">Id type</label>
+		<input th:field="*{id_type}" class="form-control" id="inputId_type" placeholder="Tipo usuario">
+	</div>
+	
+	<div class="form-group">
+		<label for="inputStatus">Status</label>
+		<input th:field="*{status}" class="form-control" id="inputStatus" placeholder="Estado">
+	</div>
+	
+	<div class="form-row">
+		<button type="submit" class="btn btn-primary">Grabar</button>
+	</div>
+</form>
+</body>
+</html>
